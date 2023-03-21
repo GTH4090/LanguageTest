@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LanguageDesktop.Pages.Auth">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Login"/>
+                <TextBox Name="LoginTbx"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Password"/>
+                <TextBox Name="PasswordPbx" PasswordChar="*" KeyUp="PasswordPbx_OnKeyUp"/>
+                <TextBox Name="PasswordTbx" IsVisible="False" KeyUp="PasswordTbx_OnKeyUp"/>
+                <Button Name="PasswordBtn" Click="PasswordBtn_OnClick" Width="30"/>
+            </StackPanel>
+            <Button Name="LoginBtn" Content="Авторизоваться" Click="LoginBtn_OnClick"/>
+            <Button Name="RegBtn" Content="Регистрация" Click="RegBtn_OnClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

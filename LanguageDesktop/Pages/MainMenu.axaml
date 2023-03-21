@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LanguageDesktop.Pages.MainMenu">
+    <Grid RowDefinitions="*, Auto">
+        <DataGrid Name="ClientDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Lastname}" Width="Auto" Header="Lastname"/>
+                <DataGridTextColumn Binding="{Binding Firstname}" Width="Auto" Header="Firstname"/>
+                <DataGridTextColumn Binding="{Binding Surname}" Width="Auto" Header="Surname"/>
+                <DataGridTextColumn Binding="{Binding Gender.Name}" Width="Auto" Header="Gender"/>
+                <DataGridTextColumn Binding="{Binding Phonenum}" Width="Auto" Header="Phonenum"/>
+                <DataGridTextColumn Binding="{Binding Photo}" Width="Auto" Header="Photo"/>
+                <DataGridTextColumn Binding="{Binding Birthdate}" Width="Auto" Header="Birthdate"/>
+                <DataGridTextColumn Binding="{Binding Email}" Width="Auto" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding Regdate}" Width="Auto" Header="Regdate"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
