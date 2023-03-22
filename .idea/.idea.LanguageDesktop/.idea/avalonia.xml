@@ -6,6 +6,7 @@
         <entry key="LanguageDesktop/App.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
         <entry key="LanguageDesktop/MainWindow.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
         <entry key="LanguageDesktop/Pages/Auth.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
+        <entry key="LanguageDesktop/Pages/ClientEdit.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
         <entry key="LanguageDesktop/Pages/MainMenu.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
         <entry key="LanguageDesktop/Pages/Registration.axaml" value="LanguageDesktop/LanguageDesktop.csproj" />
       </map>

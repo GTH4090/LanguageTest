@@ -1,0 +1,52 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="LanguageDesktop.Pages.ClientEdit">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Name="ClientSp">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Lastname"/>
+                <TextBox Text="{Binding Lastname}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Firstname"/>
+                <TextBox Text="{Binding Firstname}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Surname"/>
+                <TextBox Text="{Binding Surname}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Gender"/>
+                <ComboBox Name="GenderCbx" SelectedItem="{Binding Gender}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Phonenum"/>
+                <TextBox Text="{Binding Phonenum}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Photo"/>
+                <TextBox Text="{Binding Photo}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Birthdate"/>
+                <CalendarDatePicker Name="BirthDp" SelectedDate="{Binding Birthdate}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Email"/>
+                <TextBox Text="{Binding Email}"/>
+            </StackPanel>
+            
+            <Button Name="OkBtn" Content="Ок" Click="OkBtn_OnClick"/>
+            <Button Name="CancelBtn" Content="Отмена" Click="CancelBtn_OnClick"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

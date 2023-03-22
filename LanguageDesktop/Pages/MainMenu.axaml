@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="LanguageDesktop.Pages.MainMenu">
-    <Grid RowDefinitions="*, Auto">
-        <DataGrid Name="ClientDataGrid" AutoGenerateColumns="False" IsReadOnly="True">
+    <Grid RowDefinitions="Auto, *, Auto">
+        <DataGrid Name="ClientDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Lastname}" Width="Auto" Header="Lastname"/>
                 <DataGridTextColumn Binding="{Binding Firstname}" Width="Auto" Header="Firstname"/>
@@ -19,12 +19,32 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <ComboBox Grid.Row="1" Name="GenderCbx" HorizontalAlignment="Left" SelectionChanged="SelectingItemsControl_OnSelectionChanged">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Name}"></TextBlock>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+            <ComboBox Grid.Row="1" Name="GenderCbx" HorizontalAlignment="Left" SelectionChanged="SelectingItemsControl_OnSelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            
+            
+            <TextBox Name="SearchTbx" KeyUp="SearchTbx_OnKeyUp"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Right">
+            <Label Content="От:" Width="40"/>
+            <CalendarDatePicker Name="FromDp" SelectedDateChanged="FromDp_OnSelectedDateChanged"/>
+            <Label Content="До:" Width="40"/>
+            <CalendarDatePicker Name="ToDp" SelectedDateChanged="FromDp_OnSelectedDateChanged"/>
+        </StackPanel>
+        
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="AddBtn" Content="Добваить" Click="AddBtn_OnClick"/>
+            <Button Name="EditBtn" Content="Изменить" Click="EditBtn_OnClick"/>
+            <Button Name="DelBtn" Content="Удалить" Click="DelBtn_OnClick"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

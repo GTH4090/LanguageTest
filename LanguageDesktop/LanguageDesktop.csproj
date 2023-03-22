@@ -25,4 +25,8 @@
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.2" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets" />
+    </ItemGroup>
 </Project>

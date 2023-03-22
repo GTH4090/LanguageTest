@@ -23,6 +23,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/home/user/RiderProjects/LanguageDesktop/LanguageDesktop/Pages/Auth.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/user/RiderProjects/LanguageDesktop/LanguageDesktop/Pages/ClientEdit.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/user/RiderProjects/LanguageDesktop/LanguageDesktop/Pages/MainMenu.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
